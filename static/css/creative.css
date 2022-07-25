@@ -274,7 +274,7 @@ header .header-content .header-content-inner p {
     }
         
     header .header-content .header-content-inner img {
-        width: 72%;
+        width: 90%!important;
         content: url(../img/header-title-nobottom.png);
         margin-top: -60px;
     }
