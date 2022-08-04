@@ -149,11 +149,12 @@ aside {
         background: rgba(85,174,232,0.35);
         display: flex;
         justify-content: center;
-        /*background-color: transparent;*/
+        background-color: rgba(255 255 255 / 30%) !important;
     }
 
     .navbar-default .navbar-header .navbar-brand {
         color: rgba(0,0,0,.8);
+        /* background-color: rgba(255 255 255 / 75%) !important; */
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
