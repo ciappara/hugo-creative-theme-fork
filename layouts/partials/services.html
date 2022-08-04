@@ -1,11 +1,13 @@
 {{ "<!-- SERVICES -->" | safeHTML }}
-<section id="services">
+<section id="services" class="bg-info">
+
     {{ with .Site.Params.services.headline }}
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">{{ . }}</h2>
-                    <hr class="primary">
+                    <img src="img/animations/flowers2.gif" data-bottom-top="@src:img/animations/flowers2.gif" height="150" alt="" class="skrollable skrollable-after mb-3r">
+                    <h2 class="section-heading mb-3r">{{ . }}</h2>
+                    <!-- <hr class="primary"> -->
                 </div>
             </div>
         </div>
@@ -13,10 +15,13 @@
     <div class="container">
         <div class="row">
             {{ range .Site.Params.services.list }}
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x {{ .icon }} wow bounceIn text-primary"></i>
+                    <i class="fa fa-4x {{ .icon }} wow bounceIn text-dark"></i>
                     <h3>{{ .title }}</h3>
+                    {{ with .date }}
+                        <p class="text-muted" style="font-size: 19px; padding-bottom: 4px;">{{ . }}</p>
+                    {{ end }}
                     {{ with .description }}
                         <p class="text-muted">{{ . }}</p>
                     {{ end }}

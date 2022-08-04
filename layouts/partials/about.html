@@ -1,16 +1,18 @@
 {{ "<!-- ABOUT -->" | safeHTML }}
-<section class="bg-primary" id="about">
+<section id="about"> <!-- class="bg-primary" -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
+                <img src="img/animations/flowers.gif" data-bottom-top="@src:img/animations/flowers.gif" height="150" alt="" class="skrollable skrollable-after mb-3r">
+
                 {{ with .Site.Params.about.headline }}
-                    <h2 class="section-heading">{{ . }}</h2>
+                    <h2 class="section-heading mb-3r">{{ . }}</h2>
                 {{ end }}
                 {{ if and .Site.Params.about.headline .Site.Params.about.description }}
-                    <hr class="light">
+                    <!-- <hr class="dark"> -->
                 {{ end }}
                 {{ with .Site.Params.about.description }}
-                    <p class="text-faded">{{ . | markdownify }}</p>
+                    <p class="text-muted">{{ . | markdownify }}</p>
                 {{ end }}
                 {{ with .Site.Params.about.buttonText }}
                     <a href="#" class="btn btn-default btn-xl">{{ . }}</a>

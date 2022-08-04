@@ -20,9 +20,13 @@
             {{ partial "services.html" . }}
         {{ end }}
 
-        {{ if .Site.Data.projects }}
-            {{ partial "portfolio.html" . }}
-        {{ end }}
+        <!-- { if .Site.Data.projects }} -->
+            {{ partial "gallery.html" . }}
+        <!-- { end }} -->
+
+        <!-- { if .Site.Data.projects }}
+            { partial "portfolio.html" . }}
+        { end }} -->
 
         {{ if .Site.Params.location }}
             {{ partial "location.html" . }}

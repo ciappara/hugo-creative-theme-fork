@@ -49,12 +49,15 @@ a:focus {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+
+h2 {
+    font-family: 'Pacifico';
 }
 
 p {
@@ -92,7 +95,7 @@ aside {
     border: none;
     /*border-color: rgba(34,34,34,.05);*/
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    background-color: #fff;
+    background-color: #333;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -144,11 +147,13 @@ aside {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
         background: rgba(85,174,232,0.35);
+        display: flex;
+        justify-content: center;
         /*background-color: transparent;*/
     }
 
     .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
+        color: rgba(0,0,0,.8);
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
@@ -158,12 +163,12 @@ aside {
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
+        color: rgba(0,0,0,.4);
     }
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
+        color: rgba(0,0,0,.9);
     }
 
     .navbar-default.affix {
@@ -192,13 +197,18 @@ aside {
     }
 }
 
+.mb-3r {
+    margin-bottom: 3.3rem;
+}
+
 header {
     position: relative;
     width: 100%;
     min-height: auto;
     text-align: center;
     color: #fff;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgb(85 174 232 / 30%)), url(../img/header.jpg);
+    background: linear-gradient(0deg, rgba(0 0 0 / 22%), rgb(0 0 0 / 7%)), url(../img/header.jpg);
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgb(85 174 232 / 0%)), url(../img/header.jpg); */
     /* background-image: url(../img/header.jpg); */
     background-position: center;
     -webkit-background-size: cover;
@@ -238,6 +248,13 @@ header .header-content .header-content-inner p {
     font-weight: 300;
     color: rgba(255,255,255,.7);
 }
+.navbar-collapse {
+    display: flex!important;
+    justify-content: center;
+}
+.navbar {
+    background: transparent;
+}
 
 @media(max-width:768px) {
     .navbar {
@@ -247,14 +264,14 @@ header .header-content .header-content-inner p {
         border: none !important;
     }
     .navbar-nav {
-        background: rgb(85 174 232 / 58%);
+        /*background: rgb(85 174 232 / 58%);*/
         float: right;
-        color: #FFF;
+        color: #333;
         margin-right: 2px;
         border-radius: 8px;
     }
     .navbar-nav li a {
-       color: #FFF !important;
+       color: #333 !important;
     }
     .navbar-toggle .icon-bar {
         background-color: #FFF !important;
@@ -317,6 +334,11 @@ header .header-content .header-content-inner p {
     max-width: 400px;
 }
 
+.centered-menu {
+    display: flex!important;
+    justify-content: center;
+}
+
 @media(min-width:992px) {
     .service-box {
         margin: 20px auto 0;
@@ -332,6 +354,7 @@ header .header-content .header-content-inner p {
     position: relative;
     margin: 0 auto;
     max-width: 650px;
+    /* max-height: 290.94px; */
 }
 
 .portfolio-box .portfolio-box-caption {
@@ -548,4 +571,71 @@ body {
     height: 300px;
     overflow: visible;
     position: relative;
+}
+
+
+
+
+// FANCYPANTS STYLES FOR LOOKS
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Open+Sans&display=swap');
+
+
+
+.gallery-wrapper {
+	margin: 0 auto;
+	max-width: 60rem;
+	padding: 2rem;
+	text-align: center;
+}
+.gallery-container {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+.gallery-container h2 {
+    color: #333;
+}
+.gallery-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.gallery-container ul li img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+
+// THE MEAT AND POTATOES
+.gallery-container ul.masonry-gallery {
+    columns: 12rem;
+    column-gap: 1rem;
+}
+.gallery-container ul.masonry-gallery li {
+    break-inside: avoid;
+    margin: 0 0 1rem;
+}
+
+
+
+.gallery-container ul.mosaic-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem;
+    justify-content: center;
+}
+.gallery-container ul.mosaic-gallery li {
+    background-position: center center;
+    background-size: cover;
+    flex: auto;
+    height: 50rem;
+    margin: 0 0.5rem 1rem;
+    max-height: 45rem;
+    max-width: 55rem;
+}
+.gallery-container ul.mosaic-gallery li img {
+    height: 100%;
+    opacity: 0;
 }

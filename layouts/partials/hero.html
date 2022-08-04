@@ -3,7 +3,9 @@
     <div class="header-content">
         <div class="header-content-inner">
             {{ with .Site.Params.hero.slogan }}
-                <img src="../img/header-title.png">
+                <!-- <img src="../img/header-title.png"> -->
+
+
                 <!-- <h1>{{ . | markdownify  }}</h1> -->
             {{ end }}
             <!-- {{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
@@ -16,5 +18,14 @@
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>
             {{ end }} -->
         </div>
+    </div>
+
+    <div style="
+        position: absolute;
+        margin: 0 auto;
+        width: 100%;
+        bottom: 40px;
+    ">
+        <img src="img/animations/ourwedding_wh.gif" data-top-bottom="@src:img/animations/ourwedding_wh.gif" alt="" height="150" class="skrollable skrollable-before" style="">
     </div>
 </header>
