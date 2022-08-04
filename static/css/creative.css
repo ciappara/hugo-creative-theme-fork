@@ -630,9 +630,9 @@ body {
     background-position: center center;
     background-size: cover;
     flex: auto;
-    height: 50rem;
+    height: 40rem;
     margin: 0 0.5rem 1rem;
-    max-height: 45rem;
+    max-height: 40rem;
     max-width: 55rem;
 }
 .gallery-container ul.mosaic-gallery li img {
