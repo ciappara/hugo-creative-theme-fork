@@ -1,0 +1,20 @@
+
+.contact-desc {
+    padding-top: 14px;
+}
+
+@media (max-width: 1200px) {
+        
+    .contact-location {
+        padding: 18px 0 36px 0;
+    }
+
+}
+
+@media (min-width: 1200px) {
+        
+    .contact-desc {
+        height: 90px;
+    }
+
+}

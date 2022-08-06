@@ -5,6 +5,7 @@
     max-width: 1200px;
     margin: 20px auto;
     padding-top: 20px;
+    padding-bottom: 17px;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -12,7 +13,7 @@
     content: "";
     position: absolute;
     width: 4px;
-    background-color: #c75b89; /* middle line colour */
+    background-color: #55934D; /* middle line colour */
     border-radius: 10%;
     top: 0;
     bottom: 0;
@@ -36,7 +37,7 @@
     height: 20px;
     right: -9px;                  /* centered dot right margin */
     background-color: white;    /* centered dot bg */
-    border: 3px solid #c75b89;  /* centered dot border */
+    border: 3px solid #55934D;  /* centered dot border */
     top: 15px;
     border-radius: 50%;
     z-index: 1;

@@ -1,8 +1,10 @@
 {{ "<!-- CONTACT -->" | safeHTML }}
-<section id="contact" class="bg-info">
+<section id="contact" class="bg-coloured">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
+                <img src="img/animations/flowers2.gif" data-bottom-top="@src:img/animations/flowers2.gif" height="150" alt="" class="skrollable skrollable-after mb-3r">
+
                 {{ with .Site.Params.contact.headline }}
                     <h2 class="section-heading">{{ . }}</h2>
                 {{ end }}
@@ -45,26 +47,30 @@
     <div class="container" style="margin-top: 40px;">
         <div class="row">
             {{ range .Site.Params.contact.list }}
-            <div class="col-lg-3 col-md-3 col-sm-12 text-center">
+            <div class="col-lg-3 col-sm-6 col-xs-12 text-center">
                 <div class="service-box">
                     <i class="fa fa-3x {{ .icon }} wow bounceIn text-dark"></i>
-                    {{ with .subtitle }}
-                        <h5 class="text-muted" style="font-style: italic;">{{ . }}</h5>
-                    {{ end }}
 
-                    <h3 style="height: 60px;">{{ .title }}</h3>
-
+                    <h4 style="padding-top: 20px;">{{ .title }}</h4>
 
                     {{ with .date }}
-                        <p class="text-muted" style="font-size: 19px; padding-bottom: 4px;">{{ . }}</p>
+                        <p class="text-muted" style="padding-bottom: 4px;">{{ . }}</p>
                     {{ end }}
+
                     {{ with .time }}
-                        <p class="text-muted" style="font-size: 19px; padding-bottom: 15px;">{{ . }}</p>
+                        <p class="text-muted" style="padding-bottom: 15px;">{{ . }}</p>
+                    {{ end }}
+
+                    {{ with .description }}
+                        <p class="text-muted contact-desc">{{ . }}</p>
                     {{ end }}
                     
-                    {{ with .description }}
-                        <p class="text-muted">{{ . }}</p>
+                    {{ with .gmaps }}
+                        <div class="contact-location">
+                            <i class="fa fa-location-dot wow bounceIn text-dark"></i>&nbsp; <a href="{{ . }}" target="_blank">See Location</a>
+                        </div>
                     {{ end }}
+
                 </div>
             </div>
             {{ end }}
