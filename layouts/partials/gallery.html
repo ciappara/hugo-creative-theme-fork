@@ -1,4 +1,4 @@
-<section>
+<section id="gallery">
 
     {{ with .Site.Params.gallery.headline }}
         <div class="container">
@@ -14,14 +14,24 @@
 
     <div class="gallery-wrapper">
         <div class="gallery-container">
-            <ul class="mosaic-gallery">
-                {{ $folder := "/static/img/gallery/"}}
-                {{ $files := readDir $folder }}
-                {{ range $files }}
-                    <li style="background-image:url('img/gallery/{{ .Name }}')"><img src="img/gallery/{{ .Name }}" /></li>
-                {{ end }}
-            </ul>
+            {{ $folder := "/static/img/gallery/"}}
+            {{ $files := readDir $folder }}
+            {{ range $files }}
+                <img src="img/gallery/{{ .Name }}" />
+            {{ end }}
         </div>
     </div>
     
+    <!-- <div class="gallery-wrapper">
+        <div class="gallery-container">
+            <ul class="mosaic-gallery">
+                { $folder := "/static/img/gallery/"}}
+                { $files := readDir $folder }}
+                { range $files }}
+                    <li style="background-image:url('img/gallery/{ .Name }}')"><img src="img/gallery/{ .Name }}" /></li>
+                { end }}
+            </ul>
+        </div>
+    </div> -->
+
 </section>

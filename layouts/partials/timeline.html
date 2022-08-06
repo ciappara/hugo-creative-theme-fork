@@ -1,0 +1,43 @@
+<section id="timeline">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <img src="img/animations/flowers.gif" data-bottom-top="@src:img/animations/flowers.gif" height="150" alt="" class="skrollable skrollable-after mb-3r">
+
+                {{ with .Site.Params.timeline.headline }}
+                    <h2 class="section-heading mb-3r">{{ . }}</h2>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline">
+        
+        {{ range $i,$p := .Site.Params.timeline.list }}
+
+            <div class="timeline-container {{ cond (modBool $i 2) "tml-left" "tml-right" }}">
+                <div class="content">
+                    {{ if not .image2 }}
+
+                        {{ with .image }}<img src="{{ . }}" class="tml-img">{{ end }}
+                    
+                    {{ else }}
+
+                        <div class="image-content">
+                            {{ with .image }}<img src="{{ . }}" class="tml-img img-left">{{ end }}{{ with .image2 }}<img src="{{ . }}" class="tml-img img-right">{{ end }}
+                        </div>
+                    
+                    {{ end }}
+                    
+                    <h3><b>{{ .date }}</b> <i class="fa fa-1x {{ .icon }} wow bounceIn text-dark"></i></h3>
+                    {{ with .title }}           <h4>{{ . }}</h4>                            {{ end }}
+                    {{ with .description }}     <p class="text-muted">{{ . }}</p>           {{ end }}
+                </div>
+            </div>
+
+        {{ end }}
+        
+    </div>
+
+</section>

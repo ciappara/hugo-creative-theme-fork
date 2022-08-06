@@ -31,15 +31,21 @@
                         <a class="page-scroll" href="#portfolio">{{ .Site.Params.navigation.links.portfolio }}</a>
                     </li>
                 {{ end }}
-                {{ if and .Site.Params.location .Site.Params.navigation.links.location }}
-                <li>
-                    <a class="page-scroll" href="#location">{{ .Site.Params.navigation.links.location }}</a>
-                </li>
+
+                {{ if and .Site.Params.timeline .Site.Params.navigation.links.timeline }}
+                    <li><a class="page-scroll" href="#timeline">{{ .Site.Params.navigation.links.timeline }}</a></li>
                 {{ end }}
+                
                 {{ if and .Site.Params.contact .Site.Params.navigation.links.contact }}
-                    <li>
-                        <a class="page-scroll" href="#contact">{{ .Site.Params.navigation.links.contact }}</a>
-                    </li>
+                    <li><a class="page-scroll" href="#contact">{{ .Site.Params.navigation.links.contact }}</a></li>
+                {{ end }}
+
+                {{ if .Site.Params.navigation.links.gallery }}
+                    <li><a class="page-scroll" href="#gallery">{{ .Site.Params.navigation.links.gallery }}</a></li>
+                {{ end }}
+
+                {{ if and .Site.Params.location .Site.Params.navigation.links.location }}
+                    <li><a class="page-scroll" href="#location">{{ .Site.Params.navigation.links.location }}</a></li>
                 {{ end }}
             </ul>
         </div>

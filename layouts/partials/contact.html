@@ -1,5 +1,5 @@
 {{ "<!-- CONTACT -->" | safeHTML }}
-<section id="contact">
+<section id="contact" class="bg-info">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -13,6 +13,7 @@
                     <p>{{ . | markdownify }}</p>
                 {{ end }}
             </div>
+
             {{ if .Site.Params.contact.phone }}
                 <div class="
                 {{ if .Site.Params.contact.email }}
@@ -25,6 +26,7 @@
                     <p>{{ .Site.Params.contact.phone }}</p>
                 </div>
             {{ end }}
+
             {{ if .Site.Params.contact.email }}
                 <div class="
                 {{ if .Site.Params.contact.phone }}
@@ -36,6 +38,35 @@
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                     <p><a href="mailto:{{ .Site.Params.contact.email }}">{{ .Site.Params.contact.email }}</a></p>
                 </div>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 40px;">
+        <div class="row">
+            {{ range .Site.Params.contact.list }}
+            <div class="col-lg-3 col-md-3 col-sm-12 text-center">
+                <div class="service-box">
+                    <i class="fa fa-3x {{ .icon }} wow bounceIn text-dark"></i>
+                    {{ with .subtitle }}
+                        <h5 class="text-muted" style="font-style: italic;">{{ . }}</h5>
+                    {{ end }}
+
+                    <h3 style="height: 60px;">{{ .title }}</h3>
+
+
+                    {{ with .date }}
+                        <p class="text-muted" style="font-size: 19px; padding-bottom: 4px;">{{ . }}</p>
+                    {{ end }}
+                    {{ with .time }}
+                        <p class="text-muted" style="font-size: 19px; padding-bottom: 15px;">{{ . }}</p>
+                    {{ end }}
+                    
+                    {{ with .description }}
+                        <p class="text-muted">{{ . }}</p>
+                    {{ end }}
+                </div>
+            </div>
             {{ end }}
         </div>
     </div>
