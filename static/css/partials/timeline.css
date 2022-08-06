@@ -170,7 +170,7 @@
     margin: 0 auto;
 }
 
-
+/*@media (min-width: 572px) and (max-width: 600px),*/
 @media screen and (min-width: 1080px) {
     .img-left {
         border-right: none;
@@ -182,5 +182,19 @@
         border-left: none;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+    }
+}
+
+@media screen and (max-width: 571px) {
+    .img-left {
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: solid 6px white;
+    }
+    .img-right {
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 }
