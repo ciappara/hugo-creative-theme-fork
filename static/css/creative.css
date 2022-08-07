@@ -72,7 +72,7 @@ p {
 }
 
 .bg-coloured {
-    background-color: #e0e9de;
+    background-color: #F5F5F5;
 }
 
 .text-faded {
@@ -174,7 +174,7 @@ aside {
 
     /* nav bar when scrolled down */
     .navbar-default.affix {
-        background-color: #e0e9dee6 !important;
+        background-color: #F5F5F5e6 !important;
         /*background-color: rgba(255,255,255,0.9) !important;*/
     }
 

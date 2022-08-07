@@ -3,6 +3,18 @@
     padding-top: 14px;
 }
 
+.contact-location a {
+    color: #F5F5F5;
+    background-color: #333;
+    padding: 5px 9px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.contact-location a:hover {
+    color: #333;
+    background-color: #F5F5F5;
+}
+
 @media (max-width: 1200px) {
         
     .contact-location {

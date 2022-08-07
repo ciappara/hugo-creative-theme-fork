@@ -26,18 +26,24 @@
 {{ if .Site.Params.contact  }}<link rel="stylesheet" href="{{ "css/partials/contact.css" | absURL }}" type="text/css">{{ end }}
 {{ if .Site.Params.gallery  }}<link rel="stylesheet" href="{{ "css/partials/gallery.css" | absURL }}" type="text/css">{{ end }}
 {{ if .Site.Params.timeline }}<link rel="stylesheet" href="{{ "css/partials/timeline.css" | absURL }}" type="text/css">{{ end }}
+{{ range .Site.Params.css   }}<link rel="stylesheet" href="{{ . | absURL }}" type="text/css">{{ end }}
 
 {{ "<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->" | safeHTML }}
 {{ "<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->" | safeHTML }}
 {{ "<!--[if lt IE 9]>" | safeHTML }}
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 {{ "<![endif]-->" | safeHTML }}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
-<!-- { $sass := resources.Get "scss/main.scss" }}
-{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
-<link rel="stylesheet" href="{ $style.Permalink }}" integrity="{ $style.Data.Integrity }}"> -->
+<!--
+<link rel="stylesheet" href="{{ "scss/main.scss" | absURL }}" type="text/css">
+{ $sass := resources.Get "/static/scss/main.scss" }}
+{ if $sass }}
+    { $style := $sass | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{ $style.Permalink }}" integrity="{ $style.Data.Integrity }}">
+{ end }}
+-->

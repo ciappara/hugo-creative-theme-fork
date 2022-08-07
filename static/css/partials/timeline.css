@@ -13,7 +13,7 @@
     content: "";
     position: absolute;
     width: 4px;
-    background-color: #55934D; /* middle line colour */
+    background-color: #CCC;     /* middle line colour */
     border-radius: 10%;
     top: 0;
     bottom: 0;
@@ -37,7 +37,7 @@
     height: 20px;
     right: -9px;                  /* centered dot right margin */
     background-color: white;    /* centered dot bg */
-    border: 3px solid #55934D;  /* centered dot border */
+    border: 3px solid #CCC;     /* centered dot border */
     top: 15px;
     border-radius: 50%;
     z-index: 1;
