@@ -204,3 +204,11 @@
         border-top-right-radius: 0;
     }
 }
+
+@media screen and (max-width: 600px) {
+    /* Remove arrows from container (pointing right/left) */
+    .tml-left::before,
+    .tml-right::before {
+        border-width: 0 0 0 0 !important;
+    }
+}
