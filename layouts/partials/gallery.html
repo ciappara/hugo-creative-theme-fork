@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                {{ if .animation }}
+                {{ with .animation }}
                     <img src="{{ . }}" data-bottom-top="@src:{{ . }}" height="150" alt="" class="skrollable skrollable-after mb-3r">
                 {{ end }}
                 <h2 class="section-heading mb-3r">{{ .headline }}</h2>
