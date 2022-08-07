@@ -1,3 +1,5 @@
+{{ if .Site.Params.aside.visible }}
+
 {{ "<!-- ASIDE -->" | safeHTML }}
 <aside class="bg-coloured">
     <div class="container text-center">
@@ -11,3 +13,5 @@
         </div>
     </div>
 </aside>
+
+{{ end }}

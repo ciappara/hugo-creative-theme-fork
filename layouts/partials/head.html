@@ -19,14 +19,16 @@
 {{ "<!-- Plugin CSS -->" | safeHTML }}
 <link rel="stylesheet" href="{{ "css/animate.min.css" | absURL }}" type="text/css">
 
-{{ "<!-- Custom CSS -->" | safeHTML }}
+{{ "<!-- Theme CSS -->" | safeHTML }}
 <link rel="stylesheet" href="{{ "css/creative.css" | absURL }}" type="text/css">
 {{ if .Site.Data.projects   }}<link rel="stylesheet" href="{{ "css/modals.css" | absURL }}" type="text/css">{{ end }}
 {{ if .Site.Params.about    }}<link rel="stylesheet" href="{{ "css/partials/about.css" | absURL }}" type="text/css">{{ end }}
 {{ if .Site.Params.contact  }}<link rel="stylesheet" href="{{ "css/partials/contact.css" | absURL }}" type="text/css">{{ end }}
-{{ if .Site.Params.gallery  }}<link rel="stylesheet" href="{{ "css/partials/gallery.css" | absURL }}" type="text/css">{{ end }}
-{{ if .Site.Params.timeline }}<link rel="stylesheet" href="{{ "css/partials/timeline.css" | absURL }}" type="text/css">{{ end }}
-{{ range .Site.Params.css   }}<link rel="stylesheet" href="{{ . | absURL }}" type="text/css">{{ end }}
+{{ if .Site.Params.gallery.visible  }}<link rel="stylesheet" href="{{ "css/partials/gallery.css" | absURL }}" type="text/css">{{ end }}
+{{ if .Site.Params.timeline.visible }}<link rel="stylesheet" href="{{ "css/partials/timeline.css" | absURL }}" type="text/css">{{ end }}
+
+{{ "<!-- Custom CSS -->" | safeHTML }}
+{{ range .Site.Params.css           }}<link rel="stylesheet" href="{{ . | absURL }}" type="text/css">{{ end }}
 
 {{ "<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->" | safeHTML }}
 {{ "<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->" | safeHTML }}

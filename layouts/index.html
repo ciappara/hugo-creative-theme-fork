@@ -4,13 +4,13 @@
         {{ partial "head.html" . }}
     </head>
     <body id="page-top">
+
         {{ if or .Site.Params.navigation.links.about .Site.Params.navigation.links.services .Site.Params.navigation.links.portfolio .Site.Params.navigation.links.contact }}
             {{ partial "nav.html" . }}
         {{ end }}
 
         {{ if .Site.Params.hero }}
-            <!--  partial "hero-slider.html" . }} -->
-            {{ partial "hero.html" . }}
+            {{ partial "hero.html" . }} <!--  partial "hero-slider.html" . }} -->
         {{ end }}
 
         {{ if .Site.Params.about }}
@@ -29,28 +29,21 @@
             {{ partial "contact.html" . }}
         {{ end }}
         
-        <!-- { if .Site.Data.projects }} -->
-            {{ partial "gallery.html" . }}
-        <!-- { end }} -->
-
-        <!-- { if .Site.Data.projects }}
-            { partial "portfolio.html" . }}
-        { end }} -->
-
-        {{ if .Site.Params.location }}
-            {{ partial "location.html" . }}
+        {{ partial "gallery.html" . }}
+        
+        {{ if and .Site.Data.projects .Site.Params.portfolio.modal.client }}
+            {{ partial "portfolio.html" . }}
         {{ end }}
 
-        {{ if .Site.Params.aside }}
-            {{ partial "aside.html" . }}
-        {{ end }}
-
+        {{ partial "location.html" .    }}
+        {{ partial "aside.html" .       }}
+        
 
         <!-- { if .Site.Params.contact }}
             { partial "contact.html" . }}
         { end }} -->
         
-        {{ if .Site.Data.projects }}
+        {{ if and .Site.Data.projects .Site.Params.portfolio.modal.client }}
             {{ partial "modals.html" . }}
         {{ end }}
 

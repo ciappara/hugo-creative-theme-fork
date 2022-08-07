@@ -170,8 +170,11 @@
     margin: 0 auto;
 }
 
-/*@media (min-width: 572px) and (max-width: 600px),*/
-@media screen and (min-width: 1080px) {
+
+/* HORIZONTAL STORY PICS CONNECTION */
+@media screen and (min-width: 1080px)
+    , (min-width: 555.01px) and (max-width: 600px)
+{
     .img-left {
         border-right: none;
         border-top-right-radius: 0;
@@ -185,7 +188,10 @@
     }
 }
 
-@media screen and (max-width: 571px) {
+/* VERTICAL STORY PICS CONNECTION */
+@media screen and (max-width: 555px),
+    , (min-width: 600.01px) and (max-width: 1079.9px)
+{
     .img-left {
         border-bottom: none;
         border-bottom-left-radius: 0;
